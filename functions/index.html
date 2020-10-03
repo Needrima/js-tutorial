@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+        function add() {
+            var a = 10;
+            var b = 20;
+            
+            var total = a + b;
+
+            document.write("<h3>Total = "+total+"</h3>")
+        }
+        add();//function call
+        
+        //or
+        function sum(a, b) {            
+            var total = a + b;
+
+            document.write("<h3>Total = "+total+"</h3>")
+        }
+        sum(15, 30);//function call
+
+        //or
+        function plus(a, b) {            
+            var total = a + b;
+            return total
+        }
+        var output = plus(12, 19);//function call and assigning to variable
+
+        document.write("<h3>Total = "+output+"</h3>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
