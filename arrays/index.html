@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays in JS</title>
+
+    <script>
+        //to declare arrays
+        //array index starts from zero
+        //             0        1       2         3
+        var cars = ["Benz", "Honda", "Dodge", "Toyota"];
+        document.write("<big>"+cars+"</big><br><br>");
+        document.write("--------------------------------<br><br>");
+
+        //to access a particular element
+        document.write("<big>"+cars[3]+"</big><br><br>");
+        document.write("--------------------------------<br><br>");
+
+        //another way of creating arrays;not recommended
+        var fruits;
+        fruits = new Array("Orange", "Mango", "Apple", "Grape");
+        document.write("<big>"+fruits+"</big><br><br>");
+        document.write("--------------------------------<br><br>");
+
+        //looping over arrays
+        for (var i = 0; i < 4;i++){ 
+            document.write("<big>"+cars[i]+"</big><br><br>");
+        };
+        document.write("--------------------------------<br><br>");
+
+        //arrays in JS don't have a fixed length and they are dynamic so to add a new elements
+        fruits.push("Watermelon", "Pineapple", 2, 30); 
+        for (var i = 0; i < fruits.length;i++){//.length is a property of JS arrays  
+            document.write("<big>"+fruits[i]+"</big><br><br>");
+        };
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
