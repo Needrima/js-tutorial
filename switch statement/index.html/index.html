@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch in JS</title>
+    <script>
+        //if-else if statement
+        var age3 = 25;
+        if (age3 < 13) {
+            document.write("<h2>Not a teenager</h2><br><br>");
+        } else if(age3 < 19){
+            document.write("<h2>A Teenager</h2><br><br>");
+        } else {
+            document.write("<h2>An Adult</h2><br><br>");
+        }
+        //switch statement s used to avoid numerous if-else
+        var age4 = 12;
+        switch (age4 % 2) {
+            case 0:
+            document.write("<h2>Even</h2><br><br>")
+            break;
+            case 1:
+            document.write("<h2>Odd</h2><br><br>")
+            break;
+            default:
+            document.write("<h2>Maybe Decimal</h2><br><br>")
+            break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

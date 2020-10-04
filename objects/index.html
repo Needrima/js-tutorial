@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object in JS</title>
+
+    <script>
+        //Basic object syntax
+        var car = {
+            Make:"Toyota",
+            Model:"Corolla",
+        };
+        document.write("<h2>"+car.Make+"</h2>");
+        document.write("<h2>"+car.Model+"</h2>");
+
+        //functions can also be an object property
+        var car2 = {
+            Make:"Honda",
+            Model:"Accord",
+
+            Registered : function(){
+                document.write("<h2>This is a registered car</h2>")
+            },
+        };
+        document.write("<h2>"+car2.Make+"</h2>");
+        document.write("<h2>"+car2.Model+"</h2>");
+        car2.Registered();//trailing paretheses because of its a funtion
+        //or
+        var car2 = {
+            Make:"Honda",
+            Model:"Accord",
+
+            Registered : function(){
+                return "This is a registered car"
+            },
+        };
+        document.write("<h2>"+car2.Make+"</h2>");
+        document.write("<h2>"+car2.Model+"</h2>");
+        document.write("<h2>"+car2.Registered()+"</h2>");
+
+        //if there are many cars an helper function can be created to handle multiple object
+        function Cars(Make, Model) {
+            this.Make = Make;
+            this.Model = Model;
+            this.Registered = function(){
+                document.write("<h2>This is a registered car</h2>");
+            };
+        };
+        var c1 = new Cars("Benz", "ML350");
+        c1.Registered();
+        document.write("<h2>"+c1.Make+"</h2>");
+        document.write("<h2>"+c1.Model+"</h2>");
+
+        var c2 = new Cars("Porsche", "Panamera");
+        c2.Registered();
+        document.write("<h2>"+c2.Make+"</h2>");
+        document.write("<h2>"+c2.Model+"</h2>");
+    </script>
+</head>
+<body>
+    <h2></h2>
+</body>
+</html>
