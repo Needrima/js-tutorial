@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting text user input</title>
+    <script>
+        function match() {
+            var pword1 = document.getElementById("txt1").value;//gets text in txt1 and assign to uname
+            var pword2 = document.getElementById("txt2").value;//gets text in txt2 and assign to pword
+            if (pword1 != pword2) {
+                alert("Passwords mismatch")
+            }else{
+                alert("Passwords match");
+            };                
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="password" id="txt1" placeholder="Password"><br><br>
+        <input type="password" id="txt2" placeholder="Re confirm Password"><br><br>
+        <input type="submit" id="sub" onclick="match()"><br><br>
+    </form>
+</body>
+</html>

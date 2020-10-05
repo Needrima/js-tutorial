@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting radio button user input</title>
+    <script>
+        function match() {
+            var rd1 = document.getElementById("radio1");//gets radio1 and assign to uname
+            var rd2 = document.getElementById("radio2");//gets radio2 and assign to pword
+            if (rd1.checked == true) {//checks if the radio button is checked
+                alert("You "+rd1.value+" to our terms and conditions")
+            }else if(rd2.checked == true){//checks if the radio button is checked
+                alert("You "+rd2.value+" to our terms and conditions");
+            }else {//if none is checked
+                alert("No agreement policy")
+            };             
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <!--Giving the same name to more than one radio button ensures only one is checked at a time-->
+        <input type="radio" id="radio1" value="Agree" name="rd">Agree</input><br><br>
+        <input type="radio" id="radio2" value="Do not agree" name="rd">Do not Agree</input><br><br>
+        <input type="submit" id="sub" onclick="match()"><br><br>
+    </form>
+</body>
+</html>

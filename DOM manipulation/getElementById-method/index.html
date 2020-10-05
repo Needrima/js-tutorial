@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.getElementById</title>
+    <script>
+        //alert button function
+        function sayHelloWorld() {
+            alert("Hello World!");
+        };
+
+        //using getElementById to pass data into tags
+        function sayOnclick() {
+            document.getElementById("greetings").innerHTML="Hello User!";
+        };
+
+        //using getElementById to get data from tags
+        function getMessage() {
+            var msg = document.getElementById("message").innerHTML;
+            alert(msg);
+        };
+    </script>
+</head>
+<body>
+    <!--alert button function-->
+
+    <button onclick="sayHelloWorld()">Greet me</button><br><br>
+
+    <!--using getElementById to pass data into tags-->
+    <button onclick="sayOnclick()">Print greetings</button>
+    <h2 id="greetings"></h2>
+
+    <!--using getElementById to get data from tags-->
+    <button onclick="getMessage()">Alert Message</button>
+    <h2 id="message">Message Alert</h2>
+</body>
+</html>

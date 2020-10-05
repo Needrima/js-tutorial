@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting select user input</title>
+    <script>
+        function month() {
+            var slt = document.getElementById("slct");
+            //slt.options is used to get the option and its an array
+            //alert(slt.options[0].value);//january
+            //alert(slt.options[1].value);//february
+            //alert(slt.options[2].value);//march
+            alert(slt.options[slt.selectedIndex].value);//any option in the select box
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <select id="slct">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+        </select>
+        <input onclick="month()" type="submit" value="Show month">
+    </form>
+</body>
+</html>
