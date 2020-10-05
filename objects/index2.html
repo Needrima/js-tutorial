@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object in JS</title>
+
+    <script>
+        //Basic datatypes can also be made objects by using the "new" Keyword
+        var str = new String();
+        //to chech the type of a variable ,use the "typeof" keyword
+        document.write("<h2>"+typeof(str)+"</h2>");
+        //However, assigning a value to str make changes its datatype
+        str = "Some string";
+        document.write("<h2>"+typeof(str)+"</h2>");
+
+        //properties can be added to objects outside of their definition
+        var car2 = {
+            Make:"Honda",
+            Model:"Accord",
+
+            Registered : function(){
+                document.write("<h2>This is a registered car</h2>")
+            },
+        };
+        document.write("<h2>"+car2.Make+"</h2>");
+        document.write("<h2>"+car2.Model+"</h2>");
+        car2.Registered();//trailing paretheses because of its a funtion
+
+        //50 lines of code
+        car2.Price = 5000000; //adding a price property outside the definition of car2
+        document.write("<h2>"+car2.Price+"</h2>");
+
+        //or
+        function Cars(Make, Model) {
+            this.Make = Make;
+            this.Model = Model;
+            this.Registered = function(){
+                document.write("<h2>This is a registered car</h2>");
+            };
+        };
+        var c1 = new Cars("Benz", "ML350");
+        c1.Registered();
+        document.write("<h2>"+c1.Make+"</h2>");
+        document.write("<h2>"+c1.Model+"</h2>");
+        c1.Price = 4500000;//adding property outside c1
+        document.write("<h2>"+c1.Price+"</h2>");
+        document.write("<h2>"+typeof(c1.Price)+"</h2>");
+        //obects are also dynamic
+        c1.Price = "4500000"
+        document.write("<h2>"+c1.Price+"</h2>");
+        document.write("<h2>"+typeof(c1.Price)+"</h2>");
+        //new functions can also be added
+        c1.Tested = function() {
+            document.write("<h2>This is a tested car</h2>");
+        };
+        c1.Tested();
+        //or
+        // c1.Tested = function() {
+        //     return "<h2>This is a tested car</h2>";
+        // };
+        // document.write("<h2>"+c1.Tested()+"</h2>");
+    </script>
+</head>
+<body>
+    <h2></h2>
+</body>
+</html>
