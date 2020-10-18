@@ -6,8 +6,8 @@
         function match() {
             var pword1 = document.getElementById("txt1").value;//gets text in txt1 and assign to uname
             var pword2 = document.getElementById("txt2").value;//gets text in txt2 and assign to pword
-            if (pword1 != pword2) {
-                alert("Passwords mismatch")
+            if ((pword1 != pword2) || (pword1 = "") || (pword2 = "")) {
+                alert("Passwords mismatch and/or password(s) field empty")
             }else{
                 alert("Passwords match");
             };                
