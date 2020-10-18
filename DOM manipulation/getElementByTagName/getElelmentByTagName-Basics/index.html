@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>getElementById</title>
+    <script type="text/javascript">
+        //used to get all the info in the element tag
+        function para(){
+            var paragraphs = document.getElementsByTagName("p");//paragraphs is an array type
+            //document.write(typeof(paragraphs));
+
+            paragraphs[0].style.fontSize = 50;
+            paragraphs[1].style.color = "red";
+            paragraphs[2].style.fontFamily = "sans-serif";
+            paragraphs[3].style.fontWeight = 35;
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.fontFamily = "Verdana"
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <button onclick="para()">Click Me</button>
+</body>
+</html>
