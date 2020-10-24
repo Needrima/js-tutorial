@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onmouseover and onmouseout</title>
+    <script>
+        //set what happens when mouse hovers on image or text e.t.c
+        function over() {
+            document.getElementById("img1").src = "img/max-payne.jpg";
+            document.getElementById("img2").src = "img/mass-effect.jpg";
+        };
+        //set what happens when mouse is not on image or text e.t.c
+        function out() {
+            document.getElementById("img1").src = "img/mass-effect.jpg";
+            document.getElementById("img2").src = "img/max-payne.jpg";
+        };
+        //the above will toggle two images
+    </script>
+</head>
+<body>
+    <img id="img1" onmouseover="over()" onmouseout="out()" src="img/mass-effect.jpg" width="300">
+    <hr><hr><hr><hr>
+    <img id="img2" onmouseover="over()" onmouseout="out()" src="img/max-payne.jpg" width="300">
+</body>
+</html>
