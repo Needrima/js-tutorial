@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form validation</title>
+    <script>
+        function validatelogin() {
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("pword").value;
+
+            var label = document.getElementById("l1");
+
+            if (username.trim() == "" || password.trim() == ""){
+                alert("Blank form field");
+                return false;
+            }else if (password.trim().length<5){
+                alert("Password to short. Must be at least 5 characters");
+                return false;
+            }else{
+                return true;
+            };
+        }
+    </script>
+</head>
+<body>
+    <!--notice onsubmit is in form tag not input/button tag-->
+    <form onsubmit="return validatelogin()" action="welcome.html"> <!--onsubmit-->
+        <input type="text" id="uname" placeholder="Username"><br><br>
+        <input type="password" id="pword" placeholder="Password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

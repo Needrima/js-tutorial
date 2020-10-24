@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form validation</title>
+    <script>
+        function validatelogin() {
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("pword").value;
+
+            if (username.trim() == "" || password.trim() == ""){
+                alert("Blank form field");
+                return false;
+            }else {
+                return true;
+            };
+        }
+    </script>
+</head>
+<body>
+    <!--notice onsubmit is in form tag not input/button tag-->
+    <form onsubmit="return validatelogin()" action="welcome.html"> <!--onsubmit-->
+        <input type="text" id="uname" placeholder="Username">
+        <input type="password" id="pword" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
