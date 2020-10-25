@@ -4,7 +4,7 @@
     <title>Validating phone numbers(Nigerian numbers only)</title>
     <script>
         function Valid(){
-            var email = document.getElementById("phone").value;
+            var pnumber = document.getElementById("phone").value;
             var regx = /^[0][789][01][0123698]\d{7}$/; 
             //this works for only Nigerian phone numbers(mtn,glo,airtel,9mobile)
             //the above means the first number can only be zero
@@ -15,7 +15,7 @@
             //the "^" means no number should preceed the first number and 
             //the "$" means no number should proceed after the last number
             //that way we get only eleven digits in total 
-            if (regx.test(email)) {
+            if (regx.test(pnumber)) {
                 alert("Valid Phone number!");
             }else{
                 alert("invalid Phone number!");

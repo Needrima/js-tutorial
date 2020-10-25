@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validating phone numbers(Nigerian numbers only)</title>
+    <script>
+        function Valid(){
+            var email = document.getElementById("email").value;
+            //emails follow the pattern: yourname@domainname.extention.extention2
+            //yourname can contain any letter,number,fullstop and hyphen(-)
+            //domainname can contain any letter, number, or hyphen(-)
+            //extention an contain only letters
+            //extention2 can also contain only letters and its optional
+            //                yourname    @  domainname   .  extention    .extention2(the trailing "?" means the extention2 is optional)
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,30})(.[a-z]{2,8})?$/;
+            //the "+" means 1 or more (atleast one) of the defined characters
+            //{2,30} and {2,8} sets the range of the defined characters 
+             
+            if (regx.test(email)) {
+                alert("Valid email!");
+            }else{
+                alert("invalid email!");
+            };
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="email" id="email" placeholder="Enter Phone number">
+        <input type="submit" onclick="Valid()">
+    </form>
+</body>
+</html>
