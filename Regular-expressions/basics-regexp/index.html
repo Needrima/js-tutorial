@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic regexp</title>
+    <script>
+        //see Regex101.com for regular expression strings
+        function Valid(){
+            var text = document.getElementById("txt").value;
+            var exp = /[0-9]/ //means text should contain at least one and any digit at any position.
+
+            if (exp.test(text)) {
+                alert("Contains digit");
+            }else {
+                alert("Do not contains digit");
+            }
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="txt" placeholder="Enter text">
+        <input type="submit" value="Click me" onclick="Valid()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validating phone numbers(Nigerian numbers only)</title>
+    <script>
+        function Valid(){
+            var email = document.getElementById("phone").value;
+            var regx = /^[0][789][01][0123698]\d{7}$/; 
+            //this works for only Nigerian phone numbers(mtn,glo,airtel,9mobile)
+            //the above means the first number can only be zero
+            //the second number can only be 7,8, 0r 9
+            //the third number can only be 0 or 1
+            //the fourth number can only be 0,1,2,3,6,8,9
+            //the \d{7} means 7 numbers after the fourth number and the cn all be any digit
+            //the "^" means no number should preceed the first number and 
+            //the "$" means no number should proceed after the last number
+            //that way we get only eleven digits in total 
+            if (regx.test(email)) {
+                alert("Valid Phone number!");
+            }else{
+                alert("invalid Phone number!");
+            };
+        };
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="phone" placeholder="Enter Phone number">
+        <input type="submit" onclick="Valid()">
+    </form>
+</body>
+</html>
