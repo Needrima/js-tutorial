@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Jquery</title>
+</head>
+<body>
+    <button class="btn1">Click me</button>
+    <button class="btn2">Click me 2</button>
+    <h1 id="header1">Header 1</h1>
+    <h1 class="header2">Header 2</h1>    
+</body>
+<!--Declare jquery script below html body cos it takes time to load-->
+<script src="../jquery-file/jquery.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // $("button").click(toggle); //similar to onclick event
+        // $("button").dblclick(toggle); //similar to ondoubleclick event
+        $(".btn1").mouseenter(foo); //similar to onmouseover event
+        $(".btn1").mouseleave(bar); //similar to onmouseout event
+        // mouseenter and mouseleave can be combined together in hover
+        $(".btn2").hover(foo, bar); //combines mouseenter and mouseleave
+        //
+        
+        function foo() {
+            $(".header2").fadeOut();
+        };
+
+        function bar() {
+            $(".header2").fadeIn(); 
+        };
+    });
+</script>
+<!--Can also use CDN(Content Delivery Network) to render jquery script to enable faster loading-->
+</html>
