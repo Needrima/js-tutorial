@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setInterval/clearInterval</title>
+
+    <script>
+        //setInterval/clearInterval is used to time a function over a particula reprid of time
+        let seconds = 60;
+        let countdownID = 0;
+        function time() {
+            document.getElementById("cd").innerHTML = seconds + " seconds"
+            if (seconds == 0) {
+                document.write("Timeup");
+            }
+            seconds--;
+        }
+        function startCountdown() {
+           countdownID = window.setInterval(time, 1000);            
+        };
+
+        function stopCountdown() {
+            window.clearInterval(countdownID);
+        };
+    </script>
+</head>
+<body>
+    <button onclick="startCountdown()">Start</button>
+    <h1 id="cd">Click start to start countdown and stop to end countdown prematurely</h1>
+    <button onclick="stopCountdown()">Stop</button>
+</body>
+</html>

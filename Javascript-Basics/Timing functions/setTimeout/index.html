@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setInterval/clearInterval</title>
+
+    <script>
+        //setTimeout/setInterval is used to time a function over a particular period of time underground 
+        let countdownID = 0;
+        function time() {
+            document.getElementById("cd").innerHTML = "I appear after 7 seconds";
+        }
+        function startCountdown() {
+            //           window.setTimeout(functionName, time(in milliseconds))
+           countdownID = window.setTimeout(time, 7000);            
+        };
+
+        function stopCountdown() {
+            window.clearTimeout(countdownID);
+        };
+    </script>
+</head>
+<body>
+    <button onclick="startCountdown()">Start</button>
+    <h1 id="cd">Click start to start countdown underground and show message after 7 seconds and stop to end underground countdown prematurely.</h1>
+    <button onclick="stopCountdown()">Stop</button>
+</body>
+</html>
