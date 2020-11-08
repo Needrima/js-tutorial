@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Jquery</title>
+</head>
+<body>
+    <h1 id="header1">Header 1</h1>
+    <h1 class="header2">Header 2</h1>
+    <button class="btn1">Click me</button>
+</body>
+<!--Declare jquery script below html body cos it takes time to load-->
+<script src="../jquery-file/jquery.js"></script>
+
+<script>
+    //it is usually a good practice to wrap our jquery code in the 
+    //$(document).ready(function(){
+    //    code
+    //})
+    //jquery can be used with tag,class or id
+
+    //-------------------
+    $(document).ready(function(){
+        //with tag i.e button tag
+        //insetad of <button onclick="toggle()">Click me</button>
+        //we do $("button").click(toggle); because we wrapped toggle in our ready function
+        $("button").click(toggle); 
+        
+        function toggle() {
+            //with id
+            $("#header1").fadeToggle(); // or $("#header1").fadeToggle(time in milliseconds)
+            //with class
+            $(".header2").fadeToggle(1000);
+            //can also select multiple ids, classes and tags or a combo of the three properties
+            //$("#header1, .header2").fadeToggle();
+        };
+    });
+</script>
+<!--Can also use CDN(Content Delivery Network) to render jquery script to enable faster loading-->
+</html>
