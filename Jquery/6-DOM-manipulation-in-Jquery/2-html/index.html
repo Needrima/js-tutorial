@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <h1 id="header1"><i>Click</i> the <big>button</big> below to <em>alert</em> me</h1>
+    <button class="btn">Alert me</button>
+    <button class="btn2">Change button</button>
+</body>
+<script src="../../jquery-file/jquery.js"></script>
+
+<script>
+    //html() is similar to text but it shows the tags in a given text
+    $(document).ready(function (){
+        $(".btn").dblclick(function (){
+            //alert($("#header1").text()) //Show only text
+            alert($("#header1").html()) //show text with tags
+        })
+        //To change text using the html() handler
+        $(".btn2").dblclick(function (){
+            $("#header1").html("<i>Click</i> the <small>button</small> below to <em>alert</em> me") //same as .innerHTML="newtext"
+        })
+    })
+</script>
+
+</html>

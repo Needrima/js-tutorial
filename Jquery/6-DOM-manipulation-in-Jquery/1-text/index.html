@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <h1 id="header1">Click the button below to alert me</h1>
+    <button class="btn">Alert me</button>
+    <button class="btn2">Change me</button>
+</body>
+<script src="../../jquery-file/jquery.js"></script>
+
+<script>
+    //text() is used to retrieve and manipulate text 
+    $(document).ready(function (){
+        $(".btn").dblclick(function (){
+            alert($("#header1").text()) //same as .innerHTML method
+            //can also do 
+            //var txt = $("#header1").text()
+            //alert(txt)
+        })
+        //To change text using the text() handler
+        $(".btn2").dblclick(function (){
+            $("#header1").text("Jquery changed me") //same as .innerHTML="newtext"
+        })
+    })
+</script>
+
+</html>
