@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animations in Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="header1">Click the button above to animate me</h1>
+    <button onclick="toggle()">Click me</button>
+</body>
+<!--Declare jquery script below html body cos it takes time to load-->
+<script src="../jquery-file/jquery.js"></script>
+
+<script>
+    //we use the animate method in jquery to do animations
+    ///it takes three properties
+    //first is the css properties which is an object
+    //second is time in milliseconds which is a number
+    //third is a callback
+    //second and third arguments are predefined if not given. 
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("#header1").animate({
+                color: 'white',
+                width: '300px',
+                opacity: '0.5',
+                left: '30%',
+             }, 2000)
+        })
+    });
+</script>
+<!--Can also use CDN(Content Delivery Network) to render jquery script to enable faster loading-->
+</html>

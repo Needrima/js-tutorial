@@ -1,0 +1,8 @@
+bosy{}
+#header1 {
+    border: 3px solid black;
+    width: 200px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 100px;
+}

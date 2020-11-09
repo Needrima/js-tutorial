@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Callback in Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="header1">Click the button above to animate me</h1>
+    <button>Click me</button>
+</body>
+<!--Declare jquery script below html body cos it takes time to load-->
+<script src="../jquery-file/jquery.js"></script>
+
+<script>
+    //Callback in programming is passing functions as arguements
+    //animate method has a function as ts third arguement
+    //the function decides what hppens next fter the animation
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("#header1").animate({
+                color: 'white',
+                width: '300px',
+                opacity: '0.5',
+                left: '30%',
+             }, 2000,function (){alert("fnished animation")})
+             //instead of
+             //function finished(){alert("fnished animation")};
+             //finished();
+        })
+        //instead of 
+        
+    });
+</script>
+<!--Can also use CDN(Content Delivery Network) to render jquery script to enable faster loading-->
+</html>

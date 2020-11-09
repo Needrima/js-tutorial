@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Basic Jquery</title>
+    <title>Events in Jquery</title>
 </head>
 <body>
     <button class="btn1">Click me</button>
@@ -20,7 +20,7 @@
         $(".btn1").mouseleave(bar); //similar to onmouseout event
         // mouseenter and mouseleave can be combined together in hover
         $(".btn2").hover(foo, bar); //combines mouseenter and mouseleave
-        //
+        //hover takes two functions; the first works with mouseenter and the second works with mouseleave 
         
         function foo() {
             $(".header2").fadeOut();
