@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Jquery</title>
+</head>
+<body>
+    <h1 id="H1">Click the button below to toggle me</h1>
+    <button onclick="toggle()">Click me</button>
+</body>
+<!--Declare jquery script below html body cos it takes time to load-->
+<script src="../jquery-file/jquery.js"></script>
+
+<script>
+    function toggle() {
+        //$ is used to get jquery classes
+        $("H1").fadeToggle(); // or $("H1").fadeToggle(time in milliseconds)
+    };
+</script>
+<!--Can also use CDN(Content Delivery Network) to render jquery script to enable faster loading-->
+</html>
