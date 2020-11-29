@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOm manipulation</title>
+</head>
+<body>
+    <h1 id="header1">Click the button below to alert me</h1>
+    <button class="btn">Alert me</button>
+</body>
+<script src="../../jquery-file/jquery.js"></script>
+
+<script>
+    //css() is similar to attr() and is used to select a css properties
+    $(document).ready(function (){
+        $(".btn").dblclick(function (){
+            alert($("#header1").css("color")) 
+            //or
+            //css("font-size"),css("font-family"),css("border")
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Changing css props with css()</title>
+</head>
+<body>
+    <h1 id="header1" class="header" value="v1">Click the button below to alert me</h1>
+    <button class="btn1">Get value</button>
+    <button class="btn2">Set value</button>
+</body>
+<script src="../../jquery-file/jquery.js"></script>
+
+<script>
+    //attr() is used to select a particular attribute
+    $(document).ready(function (){
+        $(".btn1").click(function (){
+            alert($("#header1").css("color")) //or attr("class") or attr("value")
+        })
+
+        $(".btn2").click(function (){
+            $("#header1").css("color", "Blue") //or attr("class") or attr("value")
+        })
+    })
+</script>
+
+</html> 
