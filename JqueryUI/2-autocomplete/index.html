@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Autocomplete</h1>
+
+    <div id="div1">
+        <form action="">
+            <input type="text" id="elems" placeholder="Enter element name">
+            <input type="submit" id="btn">
+        </form>
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //autocomplete takes two two arguement of type object
+    //first defining the source and second defining other props
+    var elements = ["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Flourine","Neon"]
+    $("#elems").autocomplete({
+            source :elements
+        },{
+            minLength:2, //amount of input before autocomplete pops-up
+            autoFocus:true, // focus on the item mouse is hovering on 
+            delay:1000, // time before autocomplete comes up in millisecond, Usually set to zero
+        })
+</script>
+</html>

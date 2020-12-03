@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Accordion</h1>
+
+    <div id="div1">
+        <h3>Javascript</h3>
+        <p>Language used to create interactivity between users and webpages</p>
+
+        <h3>Jquery</h3>
+        <p style="font-size: 30px;">Javascript library built to enable doing more with lesser code</p>
+
+        <h3>Jquery UI</h3>
+        <p>Javascript library built on Jquery library to enable better interactivity</p>
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //accordion works on block HTML elements
+    //it takes the first block tag as the heading and the next one as the header
+    $("#div1").accordion({
+        collapsible: true, // enables each panel to be collapsible
+        event : "click", //determines the event that makes panel collapse (can also be mouseover)
+        animate : 400, // to set time for animation in milliseconds
+        active : 1, //set the active tab, 0 being the first tab, 1 being the second and so on
+        heightStyle : true, //heightstyle set the height of each tab so that it is the exact height of the text it contains
+        icons : {header: "ui-icon-plus", activeHeader : "ui-icon-minus"}
+    });
+</script>
+</html>

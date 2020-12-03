@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>DOm manipulation</title>
+    <title>DOM manipulation 2</title>
 </head>
 <body>
-    <h1 id="header1">Click the button below to alert me</h1>
-    <button class="btn">Alert me</button>
+    <button class="btn1">Append</button>
+    <button class="btn2">After</button>
+    <button class="btn3">Prepend</button>
+    <button class="btn4">Before</button>
+    <button class="btn5">Empty</button>
+    <button class="btn6">Remove</button>
+    
+    <h1 id="h1" style="border: 3px solid green;padding: 5px; width: 40%;">Perform different operations with the buttons above</h1>
+   
+    
 </body>
-<script src="../../jquery-file/jquery.js"></script>
+<script src="../../jquery.js"></script>
 
 <script>
     //css() is similar to attr() and is used to select a css properties
     $(document).ready(function (){
-        $(".btn").dblclick(function (){
-            alert($("#header1").css("color")) 
-            //or
-            //css("font-size"),css("font-family"),css("border")
+        //Append
+        $(".btn1").click(function(){
+            $("#h1").append("<h2>I'm a new text</h2>")
+            //new text will be added immediately after the text
+            //within the box
+        })
+        //After
+        $(".btn2").click(function(){
+            $("#h1").after("<h2>I'm a new text</h2>")
+            //new text will be added immediately after the tag called i.e h1 tag
+            //outside the box
+        })
+        //prepend
+        $(".btn3").click(function(){
+            $("#h1").prepend("<h2>I'm a new text</h2>")
+            //new text will be added immediately before the text
+            //within the box
+        })
+        //before
+        $(".btn4").click(function(){
+            $("#h1").before("<h2>I'm a new text</h2>")
+            //new text will be added immediately before the tag called i.e h1 tag
+            //outside the box
+        })
+        //Empty
+        $(".btn5").click(function(){
+            $("#h1").empty()
+            //empty text within the box
+           
+        })
+        //Remove
+        $(".btn6").click(function(){
+            $("#h1").remove()
+            //remove everything including the box
         })
     })
 </script>
