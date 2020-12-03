@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date Picker</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Datepicker</h1>
+
+    <div id="div1">
+        <form action="">
+            <input type="text" id="dob" placeholder="Enter D.O.B">
+            <input type="submit" id="btn">
+        </form>
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //autocomplete takes two two arguement of type object
+    //first defining the source and second defining other props
+    $("#dob").datepicker({
+            showWeek:true,//show the weeks, sets weekHeader by default to "Wk"
+            weekHeader:"Week No.", //to change the weekHeader 
+            numberOfMonths:1, //sets the amount of mount to display at once
+            changeYear:true, // to enable a dropdown to choose years
+            changeMonth:true, // to enable a dropdown to choose months
+            showOtherMonths:true, // to show previous month and next month
+            minDate:new Date(2011,0,1), //to set most previous date 
+            maxDate:new Date(2030,0,1), //to set farthest future date
+            //mindate and maxdate follow the order(yyyy,mm,dd) and mm starts from 0 for January
+        })
+</script>
+</html>
