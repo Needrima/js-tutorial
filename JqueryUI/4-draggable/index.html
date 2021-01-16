@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Draggable widget</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Draggable widget</h1>
+    <div class="region" style="width: 1000px;border: 5px solid black;height: 900px;">
+        <div id="div1" style="border: 3px solid black;width: 200px;height: 200px;background-color: green;font-size: 30px;text-align: center;margin-bottom: 30px;">
+            Square1
+        </div>
+
+        <div id="div2" style="border: 3px solid black;width: 200px;height: 200px;background-color: green;font-size: 30px;text-align: center;">
+            Square2
+        </div>
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //draggable widet can be applied to anything that is visible on the screen
+    $("#div1").draggable({
+        axis: "x", //specifies the axis for dragging (x:horizontal, y:vertical)
+        containment: "parent", //to set region for dragging (parent:region is inside parent tag in this case the div tag with class="region")
+        cursor: "grabbing", //changes cursor to hand when grabbing
+        opacity: 0.5,
+        grid: [300,450],//creates and imaginary grid(square will drag only after moving 300px on x-axis and 450px ony-axis)
+        snap: true,//allows elements to stick when close by
+        snapTolerance: 30, //degree of closeness for elements to stick
+    });
+
+    $("#div2").draggable({
+        axis: "y", //specifies the axis for dragging (x:horizontal, y:vertical)
+        containment: "document", //to set region for dragging (can also set to document(every where on the screen)) 
+        cursor: "grabbing",
+        opacity: 0.3,
+        grid: [300,300],//creates and imaginary grid(square will drag only after moving 300px on x-axis and 300px ony-axis)
+        snap: true,
+        snapTolerance: 30,
+    });
+</script>
+</html>
