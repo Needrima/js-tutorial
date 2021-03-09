@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Message Box widget</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Message box widget</h1>
+    <button type="submit" id="btn1">Click me</button>
+    <div id="msgbox" title="Cookie policy" style="width: 1000px;border: 5px solid black;height: 900px;">
+        Make sure cookies are enabled in your browser for maximum service.
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //draggable widet can be applied to anything that is visible on the screen
+    $("#btn1").click(function() {
+        $("#msgbox").dialog({
+            title: "Have a cookie", //if not stated message box takes the title in the html tag and also overwrites the tilte in html tag
+            draggable: true, //msgbox will not be draggable
+            resizable: true, //make the box resizable
+            height: 300, //sets default height of box
+            width: 300, //set default width of box
+            modal: false, // the screen become inactive until messagebox is exited 
+            buttons: [ //buttonsas a slice ob objects (2 buttons in this case)
+            {
+                text: "Close", //text on button
+                icon: "ui-icon-heart", //button icon
+                click: function() { //what button does on click
+                    $(this).dialog("close") //closes the messagebox
+                }
+            },{
+                text: "OK", //text on button
+                icon: "ui-icon-check", //button icon
+                click: function() { //what button does on click
+                    alert("agreement policy reached") //alrts a message
+                }
+            }]
+        })
+    });
+</script>
+</html>
