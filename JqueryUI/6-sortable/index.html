@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sortable interaction</title>
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../JqueryUI-files/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Jquery Sortable interation</h1>
+    <div class="region">
+        <div id="div1" style="border: 3px solid black;width: 200px;height: 200px;background-color: green;font-size: 30px;text-align: center;margin-bottom: 30px; display: inline-block;">
+            Square1
+        </div>
+
+        <div id="div2" style="border: 3px solid black;width: 200px;height: 200px;background-color: green;font-size: 30px;text-align: center; display: inline-block;">
+            Square2
+        </div>
+
+        <div id="div2" style="border: 3px solid black;width: 200px;height: 200px;background-color: green;font-size: 30px;text-align: center; display: inline-block;">
+            Square3
+        </div>
+    </div>
+</body>
+<!--the jquery file must be mported before the jquery UI file because Jquery UI is built on top of Jquery-->
+<script src="../jquery.js"></script>
+<script src="../JqueryUI-files/jquery-ui.js"></script>
+
+<script>
+    //sortable interaction can be applied to the parent element of the tags you want to sort
+    $(".region").sortable({
+        opaciy: 0.5, //opacity on moving
+        distance: 50, //distance before sorting occurs
+        delay: 300,
+        containment: "parent",
+        cursor: "grabbing"
+        // axis: "x",
+    });
+</script>
+</html>
