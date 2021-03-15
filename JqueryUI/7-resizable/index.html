@@ -24,7 +24,8 @@
         autoHide: true, //hides the small resizable icon at the borrom right of the selected class or id unless it is being hovered on
         //distance: 50, // mininmum distance before resizing takes effect
         ghost: true, //gives a shadow
-        aspectRatio: true, // enables width an height to resize un same ratio
+        //aspectRatio: true, // enables width an height to resize in same ratio(sometimes does not work well)
+        containment: "parent",
     });
 </script>
 </html>
