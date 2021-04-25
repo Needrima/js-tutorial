@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+    <link rel="stylesheet" href="js/jquery-ui.structure.css">
+    <link rel="stylesheet" href="js/jquery-ui.theme.css">
+    <link rel="stylesheet" href="js/jquery-ui.css">
+</head>
+<body>
+        <input title="" id="txt1" type="text" placeholder="Click the button below">
+        <input type="submit" value="Bar" onclick="bar(10, 20)">
+        <input type="submit" value="Foo" onclick="foo(2, 3)">
+        <input type="submit" value="Arrow" onclick="arrow(5, 7)"><br><br>
+        <p id="demo">This is a demo paragraph</p> 
+        <input type="submit" value="Alert thisfoo" id="btn">
+</body>
+
+<script>
+    //Typical function
+    function foo(m, n) {
+        sum = m + n
+        document.getElementById("txt1").value = "From foo: " + sum
+    }
+    //function assigned to variable
+    bar  = function(m, n) {
+        sum = m + n
+        document.getElementById("txt1").value = "From bar: " + sum
+    }
+    //arrow function
+    arrow = (m, n) => {
+        sum = m + n
+        document.getElementById("txt1").value = "From arrow: " + sum
+    }
+
+    thisFoo = function() {
+        document.getElementById("demo").innerHTML += this;
+        window.addEventListener("load", thisFoo)
+        document.getElementById("btn").addEventListener("click", thisFoo)
+    }
+</script>
+</html>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Changing attributes with attr()</title>
+    <link rel="stylesheet" href="change.css">
 </head>
 <body>
     <h1 id="header1" class="header" value="v1">Click the button below to alert me</h1>
@@ -17,8 +18,8 @@
             alert($("#header1").attr("class")) //or attr("class") or attr("value")
         })
 
-        $(".btn1").click(function (){
-            $("#header1").attr("class", "New header") //or attr("class") or attr("value")
+        $(".btn2").click(function (){
+            $("#header1").attr("class", "New-header") //or attr("class") or attr("value")
         })
     })
 </script>
